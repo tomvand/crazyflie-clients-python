@@ -365,7 +365,9 @@ class JoystickReader(object):
         try:
             data = self._selected_mux.read()
 
-            if data:
+            if data == 'ignore':
+                pass
+            elif data:
                 if data.toggled.assistedControl:
                     if self._assisted_control == \
                             JoystickReader.ASSISTED_CONTROL_POSHOLD or \

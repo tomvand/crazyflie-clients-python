@@ -50,7 +50,7 @@ class NoMux(InputMux):
 
             # TvD 2022-08-11
             if not data.muxswitch:
-                data = None
+                data = 'ignore'
 
             return data
         else:
