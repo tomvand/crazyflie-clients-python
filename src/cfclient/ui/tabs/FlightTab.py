@@ -373,12 +373,12 @@ class FlightTab(TabToolbox, flight_tab_class):
             return
 
         # To prevent conflicting commands from the controller and the flight panel
-        if JoystickReader().available_devices():
-            self.commanderBox.setToolTip(
-                'Cant use both an controller and Command Based Flight'
-            )
-            self.commanderBox.setEnabled(False)
-            return
+        # if JoystickReader().available_devices():
+        #     self.commanderBox.setToolTip(
+        #         'Cant use both an controller and Command Based Flight'
+        #     )
+        #     self.commanderBox.setEnabled(False)
+        #     return
 
     def connected(self, linkURI):
         # MOTOR & THRUST
